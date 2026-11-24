@@ -1,0 +1,20 @@
+{
+  "name": "thai-ban-chaos-night",
+  "private": true,
+  "version": "0.50.0",
+  "workspaces": [
+    "shared",
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "test:shared": "node scripts/test-shared.mjs",
+    "dev:server": "npm run dev -w server",
+    "typecheck": "npm run typecheck -w client && npm run typecheck -w server",
+    "check": "npm run typecheck && npm run test:shared",
+    "verify": "node scripts/verify.mjs",
+    "dev:client": "npm run dev -w client",
+    "loadtest": "node loadtest/run.mjs",
+    "stub-check": "node scripts/stub-typecheck.mjs"
+  }
+}
